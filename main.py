@@ -15,6 +15,7 @@ import shutil
 
 nome_arquivo = sys.argv[1]
 imagem = cv2.imread(nome_arquivo,0)
+assert imagem is not None, "file could not be read, check with os.path.exists()"
 
 #Colocando bordas na imagem
 imagem = cv2.copyMakeBorder(imagem, 50, 50, 50, 50, cv2.BORDER_REPLICATE)
@@ -104,20 +105,17 @@ for cnt in contornos:
     mean_val = cv2.mean(imagem_original,mask = mask)
     auxiliar = mean_val[0]/255
 
-    df = df.append({'Compacidade': compacidade, 'Circularidade': circularidade, 'Razão Eixos': razao_eixos,  'Intencidade Média': auxiliar}, ignore_index=True)
+    df = df.append({ 'Circularidade': circularidade, 'Razão Eixos': razao_eixos,  'Intencidade Média': auxiliar}, ignore_index=True)
 
-    imagem_contornos = cv2.drawContours(cv2.cvtColor(imagem_original, cv2.COLOR_BAYER_BG2BGRA), [cnt], 0, (222,0,0), 3)
+    #imagem_contornos = cv2.drawContours(cv2.cvtColor(imagem_original, cv2.COLOR_BAYER_BG2BGRA), [cnt], 0, (222,0,0), 3)
 
-    cv2.imwrite('ImagemClassificar\\' +str(aux) + ".bmp", imagem_contornos)
-    #print("Intencidade media : ", razao_eixos)
-    #print("")
-
+    #cv2.imwrite('ImagemClassificar\\' +str(aux) + ".bmp", imagem_contornos)
     aux += 1
 
 df.to_csv('teste.csv', index=False)
 
 # Carregar modelo
-with open('MLP\Classificador.pkl', 'rb') as f:
+with open('MLP/ClassificadorFinal.pkl', 'rb') as f:
     model = pickle.load(f)
 
 data = pd.read_csv('teste.csv')
