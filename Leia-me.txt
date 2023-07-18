@@ -1,0 +1,14 @@
+Essa pasta contém os seguintes arquivos:
+	mainTreinamento.ipynb: Arquivo utilizado para extrar ir as caracteristicas das imagens do treinamento
+		- Para cada imagem gera uma pasta contendo as imagens das folhas analisadas (folha analisada com borda) e um arquivo com as 		características extraídas das folhas.
+	
+	mlp_adaptado.ipynb: Arquivo utilizado para treinar a mlp. 
+		- Utiliza o arquivo darta.csv da pasta data como entrada de dados para treinamento e teste da mlp
+			
+	main.py: Aquivo utilizado para classificar as folhas de um diretorio.
+		- Para execute o arquivo, passe como argumento a diretório onde as imagens estão
+		Ex: python main.py '.\main.py' "Imagens\Validacao"
+
+Obs: Garanta que o diretório passado contenha somente as imagens a serem analisadas.
+
+Em caso de erro, confira se as versões das bibliotecas utilizadas condizem com as instaladas em sua máquina (versões nos comentários do código).
