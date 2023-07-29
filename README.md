@@ -1,4 +1,3 @@
-
 <h1 align="center">TRABALHO DA DISCIPLINA DE PROCESSAMENTO DE IMAGENS DIGITAIS ANO 2022 </h1>
 
 ## Descrição do Projeto
@@ -28,6 +27,10 @@ Um exemplo de relatório, para cada imagem é apresentado abaixo.
 &nbsp &nbsp Pessegueiro (1) <br />
 &nbsp &nbsp Uva do mato (1)<br />
 </p>
+
+## Acesso ao projeto
+
+Você pode [acessar o código fonte do projeto](https://github.com/BiancaOliveira/PID) ou [baixá-lo](https://github.com/BiancaOliveira/PID/archive/refs/heads/main.zip).
 
 
 
