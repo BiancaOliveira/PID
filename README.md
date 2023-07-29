@@ -6,7 +6,8 @@ para cada uma das 6 espécies amostradas e seus nomes populares. </p>
 
 <h1 align="center">
   
-  ![Figura 1](https://github.com/BiancaOliveira/PID/assets/19807026/f1f33f1c-0c8a-4c12-a95c-54ecbfae68d7#center)
+  ![Figura 1](https://github.com/BiancaOliveira/PID/assets/19807026/efda662b-e123-4d91-a079-fdc9793e2fd0#center)
+  
 </h1>
 
 <p align= "justifild"> O sistema é ser capaz de, ao apontar para uma determinada pasta, abrir e analisar todas as imagens presentes nela. Após processar 
